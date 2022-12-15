@@ -1,8 +1,8 @@
 let modInfo = {
 	name: "The RPG Tree",
-	id: "mymod",
+	id: "prgmod",
 	author: "Unknonymus",
-	pointsName: "EXP",
+	pointsName: "Skill",
 	modFiles: ["layers.js", "tree.js"],
 
 	discordName: "",
@@ -43,6 +43,9 @@ function getPointGen() {
 		return new Decimal(0)
 
 	let gain = new Decimal(1)
+	if (hasUpgrade('a', 11)) gain = gain.times(2)
+	if (hasUpgrade('b', 11)) gain = gain.times(2)
+		   if (hasUpgrade('c', 11)) gain = gain.times(upgradeEffect('c', 11))
 	return gain
 }
 
