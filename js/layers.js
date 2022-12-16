@@ -157,7 +157,7 @@ branches: ["a"],     // Horizontal position within a row. By default it uses the
     description: "Increase Skill based on EXP.",
     cost: new Decimal(10),
     effect() {
-        return player[this.layer].points.add(1).pow(0.5)
+        return 0
     },
     effectDisplay() { return format(upgradeEffect(this.layer, this.id))+"x" }, // Add formatting to the effect
 
